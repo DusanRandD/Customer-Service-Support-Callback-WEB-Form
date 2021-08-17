@@ -1,0 +1,2 @@
+# Customer-Service-Support-Callback-WEB-Form
+The Customer Service Support Callback WEB Form provide customer complain information forward into admin database and schedules callback time from the service department to customer. Admin could also add comments and archive records after completing troubleshooting with possibility for sorting records according to date and time. This application was created in Django and works in virtual environment.
