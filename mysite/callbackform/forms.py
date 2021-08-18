@@ -1,5 +1,6 @@
 from django import forms
 
+# Using widget for bootstrap class
 class CallbackFormForm(forms.Form):
     name = forms.CharField(label='Name',max_length=40,required=True,widget=forms.TextInput(attrs={'class':'form-control'}))
     phone_number = forms.CharField(label='Phone number',max_length=40,required=False,widget=forms.TextInput(attrs={'class':'form-control'}))
