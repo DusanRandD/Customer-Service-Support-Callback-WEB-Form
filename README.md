@@ -3,8 +3,8 @@ The Customer Service Support Callback WEB Form provide customer complain informa
 
 # Installation and setup guide:
 <pre>
-download zip project<br>
-unzip where you want<br>
+download zip project
+unzip where you want
 open command prompt and navigate to unzipped folder<br>
 
 in command prompt type: <br>
@@ -16,11 +16,11 @@ in command prompt type: <br>
 <b>pip install django</b>                 	#this will install django<br>
 <b>cd..</b><br>
 <b>cd mysite</b>                               #enter in mysite forlder<br>
-<b>python manage.py test</b>                   #one test is available, not required
+<b>python manage.py test</b>                   #one test is available, not required<br>
 <b>python manage.py createsuperuser</b>        #create admin, type: username, email, password(min 8 char)<br>
 <b>python manage.py runserver</b>      	#runserver<br><br>
 
-Copy url from console to browser and hit enter. This will load Customer support form.<br>
+Copy url from console to browser and hit enter. This will load Customer support form.
 To load admin page add in browser url /admin , then login with created username and password.<br><br>
 
 Turn off procedure in console:<br>
