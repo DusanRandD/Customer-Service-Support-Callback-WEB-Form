@@ -28,23 +28,4 @@ class CallbackFormTestCase(TestCase):
                          'This is an example of the problem description for test case 1')
         self.assertEqual(test_record_1.support_datetime.strftime('%Y-%m-%d %H:%M'), '2021-08-17 19:00')
 
-    def test_when_submitting_empty_required_fields(self):
-        """Test if there are errors after submitting form with missing required fields"""
-
-        all_required_fields_list = ['name', 'email', 'subject', 'problem_description']
-        no_name = {'email': 'test2@test.com',
-                   'subject': 'Test subject 2',
-                   'problem_description': 'This is an example of the problem description for test case 2'}
-
-        no_email = {'name': 'Test case 2',
-                    'subject': 'Test subject 2',
-                    'problem_description': 'This is an example of the problem description for test case 2'}
-
-        form_no_name = CallbackFormForm(no_name)
-        form_no_email = CallbackFormForm(no_email)
-        form_no_name.is_valid()
-        form_no_email.is_valid()
-        # in cleaned_data is list of validated data, the rest are in errors - if 1 is in errors that is ok
-        self.assertEqual(len(list(form_no_name.cleaned_data.keys())), len(all_required_fields_list) - 1)
-        self.assertEqual(len(list(form_no_email.cleaned_data.keys())), len(all_required_fields_list) - 1)
 
