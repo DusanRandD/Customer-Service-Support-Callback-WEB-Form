@@ -14,5 +14,6 @@ class CallbackForm(models.Model):
     support_datetime = models.DateTimeField(default=datetime.datetime.now)
     create_date = models.DateTimeField(auto_now_add=True)
 
+    # Return name of the record with subject text
     def __str__(self):
         return self.subject
