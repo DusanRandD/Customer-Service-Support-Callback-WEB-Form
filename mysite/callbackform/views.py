@@ -17,7 +17,6 @@ def display_callback_form(request):
                                        problem_description=request.POST['problem_description'],
                                        support_datetime=request.POST['support_datetime']
                                        )
-            #return HttpResponseRedirect('/confirmation')
             return render(request, 'callbackform/confirmation.html', {})
         else:
             return render(request, 'callbackform/contact_form.html', {'form': form})
