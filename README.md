@@ -16,6 +16,7 @@ in command prompt type: <br>
 <b>pip install django</b>                 	#this will install django<br>
 <b>cd..</b><br>
 <b>cd mysite</b>                               #enter in mysite forlder<br>
+<b>python manage.py test</b>                   #one test is available, not required
 <b>python manage.py createsuperuser</b>        #create admin, type: username, email, password(min 8 char)<br>
 <b>python manage.py runserver</b>      	#runserver<br><br>
 
