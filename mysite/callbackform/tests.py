@@ -1,8 +1,8 @@
 from django.test import TestCase
 from .forms import CallbackFormForm
-
-# Create your tests here.
 from callbackform.models import CallbackForm
+# Create your tests here.
+
 
 
 class CallbackFormTestCase(TestCase):
@@ -15,13 +15,6 @@ class CallbackFormTestCase(TestCase):
                                     problem_description='This is an example of the problem description for test case 1',
                                     support_datetime='2021-08-17 19:00')
 
-        CallbackForm.objects.create(name=' ',
-                                    phone_number='222222',
-                                    company='Test company 2',
-                                    email='test2@test.com',
-                                    subject='Test subject 2',
-                                    problem_description='This is an example of the problem description for test case 2',
-                                    support_datetime='2021-08-17 18:30')
 
     def test_if_data_entered_correctly_into_database(self):
         """This test is used to check if data was properly saved to the database"""
@@ -51,6 +44,7 @@ class CallbackFormTestCase(TestCase):
         form_no_email = CallbackFormForm(no_email)
         form_no_name.is_valid()
         form_no_email.is_valid()
+        # in cleaned_data is list of validated data, the rest are in errors - if 1 is in errors that is ok
         self.assertEqual(len(list(form_no_name.cleaned_data.keys())), len(all_required_fields_list) - 1)
         self.assertEqual(len(list(form_no_email.cleaned_data.keys())), len(all_required_fields_list) - 1)
 
